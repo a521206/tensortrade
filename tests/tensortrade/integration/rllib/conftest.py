@@ -75,9 +75,9 @@ def ray_session() -> Generator[None, None, None]:
 
     ray.init(
         num_cpus=2,
-        local_mode=True,
         ignore_reinit_error=True,
         log_to_driver=False,
+        include_dashboard=False,
     )
     yield
     ray.shutdown()

@@ -13,13 +13,17 @@
 # limitations under the License
 
 from abc import abstractmethod, ABCMeta
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 from gymnasium.spaces import Space
 
 
 from tensortrade.core.component import Component
 from tensortrade.core.base import TimeIndexed
+
+if TYPE_CHECKING:
+    from tensortrade.oms.orders import Broker
+    from tensortrade.oms.wallets import Portfolio
 
 
 class ActionScheme(Component, TimeIndexed, metaclass=ABCMeta):
@@ -28,6 +32,9 @@ class ActionScheme(Component, TimeIndexed, metaclass=ABCMeta):
     """
 
     registered_name = "actions"
+
+    portfolio: 'Portfolio'
+    broker: 'Broker'
 
     @property
     @abstractmethod
