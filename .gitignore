@@ -26,13 +26,15 @@ Thumbs.db
 # Testing
 .coverage
 .cache/
+.ruff_cache/
 .pytest_cache/
 .mypy_cache/
 htmlcov/
 *.html
 
-# Virtual environments
+node_modules/
 venv/
+.venv/
 tensortrade-env/
 .env/
 
