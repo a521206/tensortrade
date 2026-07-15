@@ -46,6 +46,9 @@ ray_results/
 # IDE memory/context
 memory-bank/
 
+# Agent tooling
+.kilo/
+
 # Agent storage
 examples/agents/
 examples/training_logs/
@@ -53,6 +56,3 @@ examples/training_logs/
 # Pipenv
 Pipfile
 Pipfile.lock
-
-# Kilo agent internal
-.kilo/
